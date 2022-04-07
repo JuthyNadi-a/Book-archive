@@ -8,23 +8,33 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <title>Book Archive</title>
   </head>
-  <body class="bg-dark">
+  <body class="bg-light text-dark">
     <main>
       <section>
-        <!-- Button input -->
-        <div class="p-5">
-          <h1 class="text-center text-light p-5">Latest Book Archive</h1>
+        <!-- Input and Button part -->
+        <div id="archive" class="p-5">
+          <h1 class="text-center text-dark p-5">Latest Book Archive</h1>
           <div class="input-group mb-3">
             <input
               type="text"
+              id="bookInput"
               class="form-control"
               placeholder="Write book name"
               aria-label="Write book name"
               aria-describedby="basic-addon2"
             />
-            <button class="btn btn-primary">Search</button>
+            <button
+              onclick="search()"
+              id="searchButton"
+              class="btn btn-primary"
+            >
+              Search
+            </button>
           </div>
         </div>
+        <div id="bookNumbers" class="text-center text-dark"></div>
+        <!-- Display Book -->
+        <div id="container" class="row row-cols-1"></div>
       </section>
     </main>
     <script src="js/books.js"></script>
