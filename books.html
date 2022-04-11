@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <title>Book Archive</title>
   </head>
-  <body class="bg-light text-dark">
+  <body class="bg-dark text-light">
     <main>
       <section>
         <!-- Input and Button part -->
-        <div id="archive" class="p-5">
-          <h1 class="text-center text-dark p-5">Latest Book Archive</h1>
+        <div class="p-5">
+          <h1 class="text-center text-light p-5">Latest Book Archive</h1>
           <div class="input-group mb-3">
             <input
               type="text"
@@ -32,11 +32,15 @@
             </button>
           </div>
         </div>
-        <div id="bookNumbers" class="text-center text-dark"></div>
+        <!-- total books found -->
+        <div id="bookNumbers" class="text-center text-white"></div>
+        <!-- Error part -->
+        <div id="errorText" class="text-center text-primary"></div>
         <!-- Display Book -->
-        <div id="container" class="row row-cols-1"></div>
+        <div id="container" class="row row-cols-1 row-cols-md-3 g-4 p-5"></div>
       </section>
     </main>
+
     <script src="js/books.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
   </body>
